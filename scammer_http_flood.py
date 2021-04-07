@@ -8,8 +8,8 @@ from threading import Thread
 
 # Constants
 URL = "http://localhost:8000/data/" # The URL to post the fake data
-FIRST_NAMES = tuple(json.loads(open("first_names.json").read()))
-LAST_NAMES = tuple(json.loads(open("last_names.json").read()))
+FIRST_NAMES = tuple(json.load(open("first_names.json")))
+LAST_NAMES = tuple(json.load(open("last_names.json")))
 EMAIL_PROVIDERS = ("gmail.com", "yahoo.com", "aol.com", "outlook.com", "icloud.com")
 CHARS = string.ascii_letters + string.digits + "!@#$%&"
 
