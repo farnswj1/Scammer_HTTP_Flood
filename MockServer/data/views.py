@@ -4,6 +4,6 @@ from .serializers import DataSerializer
 from .models import Data
 
 # Create your views here.
-class ListCreateData(ListCreateAPIView):
+class DataListCreateAPIView(ListCreateAPIView):
     queryset = Data.objects.all()
     serializer_class = DataSerializer

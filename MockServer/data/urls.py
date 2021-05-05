@@ -4,5 +4,5 @@ from . import views
 app_name = "data"
 
 urlpatterns = [
-    path("", views.ListCreateData.as_view())
+    path("", views.DataListCreateAPIView.as_view()),
 ]
