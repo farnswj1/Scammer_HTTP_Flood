@@ -27,7 +27,7 @@ def flood_scammer():
         password = ''.join(random.choices(CHARS, k=random.randint(8, 20)))
 
         # Post the fake data to the URL
-        print(f"Sending username {username} and password {password} to URL...")
+        print(f"Sending username {username} and password {password} to the URL...")
         
         if URL:
             try: # If an error occurs, terminate the function
@@ -38,7 +38,7 @@ def flood_scammer():
                 }
                 requests.post(URL, allow_redirects=False, data=data)
             except:
-                print(f"Failed to send {username} and password {password} to URL!")
+                print(f"Failed to send {username} and password {password} to the URL!")
                 return
 
 
